@@ -6,7 +6,7 @@ export default function Page({ params }) {
 export async function generateStaticParams() {
   return [
     {
-      slug: '/redirectMeStatic'
+      slug: 'redirectMeStatic'
     }
   ];
 }

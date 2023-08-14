@@ -2,9 +2,13 @@ import { redirect } from 'next/navigation';
 
 export default function Component({ slug }) {
   if (slug === 'redirectMe') {
-    redirect('/redirected');
+    redirect('/redirected', 'push');
+  } else if (slug === 'replaceMe') {
+    redirect('/replaced', 'replace');
+  } else if (slug === 'replaceMeStatic') {
+    redirect('/replacedMeStatic', 'replace');
   } else if (slug === 'redirectMeStatic') {
-    redirect('/redirectedStatic');
+    redirect('/redirectedStatic', 'push');
   } else {
     return (
       <div>
